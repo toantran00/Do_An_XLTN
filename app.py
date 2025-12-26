@@ -372,7 +372,7 @@ class ProfessionalApp:
             self.lbl_result.config(text="Analysis Failed", fg=COLOR_PALETTE["error"])
     
     def show_image(self, class_id):
-        img_path = f"images/{class_id}.jpg"
+        img_path = os.path.join(config.IMAGES_DIR, f"{class_id}.jpg")
         
         if os.path.exists(img_path):
             try:

@@ -1,11 +1,12 @@
 import os
 import shutil
 import pandas as pd
+import config # Import config
 
 # --- CẤU HÌNH ---
-DATASET_PATH = './dataset'
-CSV_PATH = os.path.join(DATASET_PATH, 'UrbanSound8K.csv')
-TEST_DIR = './test_audio_files' 
+DATASET_PATH = config.DATASET_DIR
+CSV_PATH = config.CSV_PATH
+TEST_DIR = config.TEST_AUDIO_DIR
 
 # Danh sách đủ 10 loại để test model "Full Power"
 CLASSES_TO_GET = [

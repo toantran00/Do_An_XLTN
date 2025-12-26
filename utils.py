@@ -17,13 +17,16 @@ def extract_features(file_path):
         return None
 
 # 2. Hàm Load Data (Phiên bản mới - Đọc từ CSV)
-def load_data(dataset_path='./dataset'):
+# 2. Hàm Load Data
+def load_data(): # Không cần tham số mặc định nữa vì đã có trong config
+    dataset_path = config.DATASET_DIR # Lấy từ config
+    
     print("\n" + "="*40)
-    print(f"📂 ĐANG LOAD DỮ LIỆU TỪ CSV: {dataset_path}")
+    print(f"📂 ĐANG LOAD DỮ LIỆU TỪ: {dataset_path}")
     print("="*40)
 
-    # Đường dẫn đến file CSV
-    csv_path = os.path.join(dataset_path, 'UrbanSound8K.csv')
+    # Đường dẫn đến file CSV lấy từ config
+    csv_path = config.CSV_PATH
     
     if not os.path.exists(csv_path):
         print(f"❌ LỖI: Không tìm thấy file {csv_path}")

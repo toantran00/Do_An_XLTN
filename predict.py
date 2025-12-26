@@ -50,7 +50,7 @@ def main():
 
     
     TEST_MODE = 'FOLDER'  
-    PATH_TO_CHECK = './test_audio_files/drilling' 
+    PATH_TO_CHECK = './test_audio_files/air_conditioner' 
     
     if TEST_MODE == 'FOLDER':
         if not os.path.exists(PATH_TO_CHECK):

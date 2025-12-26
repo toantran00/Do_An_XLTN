@@ -48,13 +48,10 @@ def main():
         print(f"❌ Lỗi load model: {e}")
         return
 
-    # 2. Cấu hình kiểm tra
-    # Bạn muốn test 1 file hay cả folder thì sửa ở đây:
-    TEST_MODE = 'FOLDER'  # Chọn 'FILE' hoặc 'FOLDER'
     
-    PATH_TO_CHECK = './test_audio_files/gun_shot' # Đường dẫn folder hoặc file
+    TEST_MODE = 'FOLDER'  
+    PATH_TO_CHECK = './test_audio_files/drilling' 
     
-    # 3. Thực thi
     if TEST_MODE == 'FOLDER':
         if not os.path.exists(PATH_TO_CHECK):
             print(f"❌ Không tìm thấy thư mục: {PATH_TO_CHECK}")

@@ -33,8 +33,18 @@ def load_data(dataset_path='./dataset'):
     metadata = pd.read_csv(csv_path)
     
     # Danh sách nhãn cần lấy
-    target_classes = ['children_playing', 'dog_bark', 'drilling', 'gun_shot']
-    
+    target_classes = [
+        'air_conditioner',    # 0: Điều hòa
+        'car_horn',           # 1: Còi xe
+        'children_playing',   # 2: Trẻ em
+        'dog_bark',           # 3: Chó sủa
+        'drilling',           # 4: Khoan
+        'engine_idling',      # 5: Động cơ nổ
+        'gun_shot',           # 6: Súng
+        'jackhammer',         # 7: Búa máy đục đường
+        'siren',              # 8: Còi hú
+        'street_music'        # 9: Nhạc đường phố
+    ]    
     # Lọc chỉ lấy những dòng thuộc 4 nhãn trên
     filtered_data = metadata[metadata['class'].isin(target_classes)]
     
